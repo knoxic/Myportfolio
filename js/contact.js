@@ -15,11 +15,13 @@ $('#submit-button').click(function(){
 			&& contact.phoneNumber 
 			&& contact.message ) {
 			console.log(contact);
-		} else {
+		
+		// clear input boxes
 			$('#first-name').val('');
 			$('#last-name').val('');
 			$('#phone-number').val('');
 			$('#message').val('');
+		} else {
 			$('#submit-button').after('<p class="serror-message" id="error-message">Please validate your inputs.</p>');
 
 				}})
