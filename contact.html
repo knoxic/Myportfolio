@@ -34,34 +34,7 @@
 	</div>
 
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" src="js/contact.js"></script>
 
-		$('#submit-button').click(function(){
-		
-			$('#error-message').remove();
-			
-			var contact = {};
-				contact.firstName = $('#first-name').val();
-				contact.lastName = $('#last-name').val();
-				contact.phoneNumber = $('#phone-number').val();
-				contact.message = $('#message').val();
-
-			if (contact.fistName != '' && contact.lastName != '' && contact.phoneNumber != ''&& contact.message != ''){
-				$('#first-name').val('');
-				$('#last-name').val('');
-				$('#phone-number').val('');
-				$('#message').val('');
-			 	console.log(contact);
-			} else {
-					console.log('lll')
-				$('#submit-button').after('<p class="serror-message" id="error-message">Please validate your inputs.</p>');
-			}
-			
-		})
-
-
-
-
-	</script>
 </body>
 </html>
