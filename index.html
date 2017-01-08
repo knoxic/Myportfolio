@@ -15,8 +15,32 @@
 		</ul>
 	</nav>
 	<div class="center-text">
-		<h1>Hi, I'm Yan Hong</h1>
+		<h1>Hi, I'm <span id="home-name">New User</span>!</h1>
 		<p>a full stack designer</p>
+		<input type="text" name="myname" id="nameinput1">
+		<button id="submit-button">Update</button>
 	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+
+		$('#submit-button').click(function(){
+			$('#error-message').remove();
+			var newName = $('#nameinput1').val();
+
+			console.log(newName);
+			if (newName != ''){
+				$('#home-name').text(newName);
+				$('nameinput1').val('');
+			} else {
+
+				$('#submit-button').after('<p class="error-message" id="error-message">Please validate your input.</p>');
+			}
+			
+		})
+
+
+
+
+	</script>
 </body>
 </html>

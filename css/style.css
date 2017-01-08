@@ -148,3 +148,8 @@ h
 	width: 80%;
 
 }
+
+.center-text .error-message {
+	color: red;
+	font-size: 0.5rem;
+}
